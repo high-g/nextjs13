@@ -1,6 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
 import { GetServerSideProps } from 'next'
 
 type NewsItem = {
@@ -14,8 +12,6 @@ type Props = {
 }
 
 const Page: React.FC<Props> = ({ news }) => {
-  const router = useRouter()
-  const id = router.query.id
   return (
     <div>
       <h1>{news.title}</h1>
